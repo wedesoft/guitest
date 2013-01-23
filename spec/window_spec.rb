@@ -14,9 +14,25 @@ describe Window do
   end
 
   describe '@ui.horizontalSlider' do
-    it 'should update @ui.lcdNumber' do
+    it 'should update the LCD number' do
       win.instance_eval { @ui.horizontalSlider }.setValue 10
       win.instance_eval { @ui.lcdNumber }.value.should eq(10.0)
+    end
+  end
+
+  describe '@ui.resetButton' do
+    context 'with slider having non-zero value' do
+      before :each do
+        win.instance_eval { @ui.horizontalSlider }.setValue 5
+      end
+      it 'should reset the slider' do
+        win.instance_eval { @ui.resetButton }.clicked
+        win.instance_eval { @ui.horizontalSlider }.value.should be(0)
+      end
+      it 'should reset the LCD number' do
+        win.instance_eval { @ui.resetButton }.clicked
+        win.instance_eval { @ui.lcdNumber }.value.should eq(0.0)
+      end
     end
   end
 

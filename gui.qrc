@@ -1,5 +1,5 @@
 <RCC>
   <qresource prefix="images">
-    <file>power.svg</file>
+    <file>reset.svg</file>
   </qresource>
 </RCC>
