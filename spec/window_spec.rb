@@ -1,4 +1,4 @@
-require 'window'
+require_relative '../window'
 
 RSpec.configure do |c|
   c.before :suite do
