@@ -2,3 +2,4 @@
 *.swp
 *_ui.rb
 *_rc.rb
+.DS_Store
