@@ -9,7 +9,13 @@ class Window < Qt::Widget
     connect @ui.resetButton, SIGNAL('clicked()'), self, SLOT('reset()')
   end
   def reset
-    @ui.horizontalSlider.setValue 0
+    if Qt::MessageBox.question(self,
+                               'Reset Value',
+                               'Do you really want to reset the slider?',
+                               Qt::MessageBox::Ok | Qt::MessageBox::Cancel,
+                               Qt::MessageBox::Cancel) == Qt::MessageBox::Ok
+      @ui.horizontalSlider.setValue 0
+    end
   end
 end
 
