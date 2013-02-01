@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'Qt4'
-require_relative 'gui_rc'
-require_relative 'window'
+require 'gui_rc'
+require 'window'
 app = Qt::Application.new ARGV
 win = Window.new
 win.show
