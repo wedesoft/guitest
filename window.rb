@@ -1,5 +1,5 @@
 require 'Qt4'
-require './window_ui'
+require 'window_ui'
 class Window < Qt::Widget
   slots 'reset()'
   def initialize(parent = nil)
