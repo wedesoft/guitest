@@ -1,5 +1,5 @@
 require 'rake/clean'
-require 'rspec/core/rake_task'
+require 'cucumber/rake/task'
 BUNDLER = 'bundle'
 RBUIC = 'rbuic4'
 RBRCC = 'rbrcc'
@@ -10,9 +10,7 @@ ICON_FILES = FileList['*.svg']
 desc 'Build everything'
 task :default => ['window_ui.rb', 'gui_rc.rb']
 
-RSpec::Core::RakeTask.new(:spec) do |t|
-  t.pattern = './spec/**/*_spec.rb'
-end
+Cucumber::Rake::Task.new
 
 desc 'Generate RC Ruby file from .qrc file'
 file QRC_RB_FILE => [QRC_FILE, *ICON_FILES] do |rc_file|
