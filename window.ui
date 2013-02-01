@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>272</width>
+    <width>234</width>
     <height>101</height>
    </rect>
   </property>
@@ -95,12 +95,12 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>165</x>
-     <y>26</y>
+     <x>148</x>
+     <y>34</y>
     </hint>
     <hint type="destinationlabel">
-     <x>345</x>
-     <y>20</y>
+     <x>220</x>
+     <y>33</y>
     </hint>
    </hints>
   </connection>
